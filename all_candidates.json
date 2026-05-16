@@ -1,0 +1,107 @@
+{
+  "file": "/home/xtr0nix/Desktop/LINUX/_Astra/so_init_hijacking/lib/pam_parsec_mac.so",
+  "sections": {
+    ".init": {
+      "addr": "0x3000",
+      "size": 23,
+      "bytes": "4883ec08488b05c55f00004885c07402ffd04883c408c3"
+    },
+    ".fini": {
+      "addr": "0x64b0",
+      "size": 9,
+      "bytes": "4883ec084883c408c3"
+    },
+    ".init_array": {
+      "addr": "0x8d70",
+      "size": 8,
+      "bytes": "0037000000000000",
+      "function_pointers": [
+        "0x3700"
+      ]
+    },
+    ".fini_array": {
+      "addr": "0x8d78",
+      "size": 8,
+      "bytes": "c036000000000000",
+      "function_pointers": [
+        "0x36c0"
+      ]
+    }
+  },
+  "constructors_disasm": {
+    "0x3700": [
+      "0x3700: endbr64 ",
+      "0x3704: jmp 0x3680",
+      "0x3709: nop dword ptr [rax]",
+      "0x3710: test rdi, rdi",
+      "0x3713: je 0x37c5",
+      "0x3719: push r14",
+      "0x371b: push r13",
+      "0x371d: push r12",
+      "0x371f: push rbp",
+      "0x3720: mov rbp, rsi",
+      "0x3723: push rbx",
+      "0x3724: test rsi, rsi",
+      "0x3727: je 0x37b6",
+      "0x372d: mov r13, rdi",
+      "0x3730: mov edi, 0x18",
+      "0x3735: mov ebx, edx",
+      "0x3737: mov r12, rcx",
+      "0x373a: call 0x33e0",
+      "0x373f: mov r14, rax",
+      "0x3742: test rax, rax",
+      "0x3745: je 0x37b6",
+      "0x3747: mov rdi, rbp",
+      "0x374a: call 0x35d0",
+      "0x374f: mov qword ptr [r14 + 0x10], rax",
+      "0x3753: test rax, rax",
+      "0x3756: je 0x37bb",
+      "0x3758: or bh, 0x10",
+      "0x375b: xor r8d, r8d",
+      "0x375e: lea rdx, [rip + 0x389b]",
+      "0x3765: mov rsi, rbp",
+      "0x3768: movsxd rcx, ebx",
+      "0x376b: mov rdi, r13",
+      "0x376e: call 0x31d0",
+      "0x3773: test eax, eax",
+      "0x3775: jne 0x37a5",
+      "0x3777: mov rdx, qword ptr [r12 + 0x60]"
+    ],
+    "0x36c0": [
+      "0x36c0: endbr64 ",
+      "0x36c4: cmp byte ptr [rip + 0x6c75], 0",
+      "0x36cb: jne 0x36f8",
+      "0x36cd: push rbp",
+      "0x36ce: cmp qword ptr [rip + 0x590a], 0",
+      "0x36d6: mov rbp, rsp",
+      "0x36d9: je 0x36e7",
+      "0x36db: mov rdi, qword ptr [rip + 0x5c3e]",
+      "0x36e2: call 0x3640",
+      "0x36e7: call 0x3650",
+      "0x36ec: mov byte ptr [rip + 0x6c4d], 1",
+      "0x36f3: pop rbp",
+      "0x36f4: ret ",
+      "0x36f5: nop dword ptr [rax]",
+      "0x36f8: ret ",
+      "0x36f9: nop dword ptr [rax]",
+      "0x3700: endbr64 ",
+      "0x3704: jmp 0x3680",
+      "0x3709: nop dword ptr [rax]",
+      "0x3710: test rdi, rdi",
+      "0x3713: je 0x37c5",
+      "0x3719: push r14",
+      "0x371b: push r13",
+      "0x371d: push r12",
+      "0x371f: push rbp",
+      "0x3720: mov rbp, rsi",
+      "0x3723: push rbx",
+      "0x3724: test rsi, rsi",
+      "0x3727: je 0x37b6",
+      "0x372d: mov r13, rdi",
+      "0x3730: mov edi, 0x18",
+      "0x3735: mov ebx, edx",
+      "0x3737: mov r12, rcx",
+      "0x373a: call 0x33e0"
+    ]
+  }
+}
